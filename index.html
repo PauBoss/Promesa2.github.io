@@ -14,7 +14,15 @@
         </p>
         <p id="countdown2">
         </p>
-        <script src="js/Practica2.js">
+        <script type="module">
+            import {cuenta} from "./js/temporizador.js";
+            cuenta(6,()=> {
+                console.log("Fin contador 1");
+            }, document.getElementById("countdown"));
+            cuenta(60,()=> {
+                document.getElementById("countdown2").innerHTML="FIN";
+                console.log("Fin contador 2");
+            }, document.getElementById("countdown2"), 100); 
         </script>
     </body>
 </html>
